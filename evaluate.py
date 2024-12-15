@@ -11,22 +11,35 @@ import matplotlib.pyplot as plt
 import os
 import time
 import pandas
+from model.Densenet import ModifiedDenseNet121,modified_densenet
+from model.Mix_Densenet import mix_densenet
 # revise the data and model path
-data_type = "entry"  # select from "entry","easy","medium","hard"
-test_datapath = "./data_used/test_entry.hdf5" # corresponding dataset (testset) path to data_type
-model_type = "mobilenet" # select from "mobilenet", "resnet", "densenet"
-model_path = "./model_used/mobilenet_entry.pth" # corresponding model path to data_type
+data_type = "medium"  # select from "entry","easy","medium","hard"
+test_datapath = "TCPOSS_data/h5py/test_medium.hdf5" # corresponding dataset (testset) path to data_type
+model_type = "mix_densenet" # select from "mobilenet", "resnet", "densenet"
+model_path = "./model/mix_densenet/mix_densenet_medium.pth" # corresponding model path to data_type
+
+# data_type = "hard"  # select from "entry","easy","medium","hard"
+# test_datapath = "TCPOSS_data/h5py/test_hard.hdf5" # corresponding dataset (testset) path to data_type
+# model_type = "mix_densenet" # select from "mobilenet", "resnet", "densenet"
+# model_path = "./model/mix_densenet/mix_densenet_hard.pth" # corresponding model path to data_type
+
 
 #hyperparameters
 batch_size = 64
 n_classes = 10
-feature_dim = {"mobilenet": 1280, "resnet": 2048, "densenet": 1024}
-model_name = {"mobilenet": "mobilenet_v2", "resnet": "resnet50", "densenet": "densenet121"}
+feature_dim = {"mobilenet": 1280, "resnet": 2048, "densenet": 1024,"m_densenet":490,"mix_densenet":490}
+model_name = {"mobilenet": "mobilenet_v2", "resnet": "resnet50", "densenet": "densenet121","m_densenet":"modified_densenet","mix_densenet":"mix_densenet"}
 data = {'random':np.zeros((5,)), 'easy':np.zeros((5,)), 'medium':np.zeros((5,)), 'hard':np.zeros((5,))}
 classes = ['asphalt', 'grass', 'cement', 'board', 'brick', 'gravel', 'sand', 'flagstone', 'plastic', 'soil']
 modes = ['random', 'easy', 'medium', 'hard']
 # model architecture
-model = torch.hub.load('pytorch/vision:v0.10.0', model_name[model_type])
+if model_name[model_type]=="modified_densenet":
+    model=modified_densenet
+elif model_name[model_type]=="mix_densenet":
+    model=mix_densenet
+else:
+    model = torch.hub.load('pytorch/vision:v0.10.0', model_name[model_type])
 classifier = nn.Sequential(
     nn.Dropout(0.25),
     nn.Linear(feature_dim[model_type], 32),

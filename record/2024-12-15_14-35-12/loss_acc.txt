@@ -1,0 +1,16 @@
+train_losses:
+0.9287362862378359, 
+train_accs:
+0.707149863243103, 
+test_losses:
+0.812460844180842, 
+test_accs:
+0.7392752170562744, 
+mean_train_acc: 0.707149863243103 +- 0.0
+var_train_acc: 0.0
+mean_test_acc: 0.7392752170562744 +- 0.0
+var_test_acc: 0.0
+total_train_accs:
+0.707149863243103, 
+total_test_accs:
+0.7392752170562744, total process time: 21.45689606666565seconds

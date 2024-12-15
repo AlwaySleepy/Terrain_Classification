@@ -14,6 +14,10 @@ import configparser
 from config.config_train import config
 import argparse
 import time
+from model.Densenet import ModifiedDenseNet121
+from model.Densenet import modified_densenet
+
+import torchvision
 
 # Create a new folder to record parameters named with current time
 folder_name = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
@@ -123,8 +127,8 @@ def load_data(datapath, mode='train'):
     data = ImageDataset(labels, images, transform=transform)
     print(len(data), "# data length")
     return data
-model_name = {"mobilenet": "mobilenet_v2", "resnet": "resnet50", "densenet": "densenet121"}
-feature_dim = {"mobilenet": 1280, "resnet": 2048, "densenet": 1024}
+model_name = {"mobilenet": "mobilenet_v2", "resnet": "resnet50", "densenet": "densenet121","m_densenet":"modified_densenet","mix_densenet":"mix_densenet"}
+feature_dim = {"mobilenet": 1280, "resnet": 2048, "densenet": 1024,"m_densenet":490,"mix_densenet":490}
 start_time = time.time()
 print("trainset:")
 training_data = load_data(train_datapath)
@@ -137,14 +141,25 @@ total_test_accs = []
 if repeat_time >= 1:
     for i in range(repeat_time):
         print("repeat_time: ", i+1)
-        # build model
-        if is_pretrained:
-            model = torch.hub.load('pytorch/vision:v0.10.0', model_name[model_type], pretrained=True)
+        if model_name[model_type] == "modified_densenet":
+            model=modified_densenet
+        elif model_name[model_type] == "mix_densenet":
+            print("mix_densenet!!!")
+            from model.Mix_Densenet import mix_densenet
+            model = mix_densenet
         else:
-            model = torch.hub.load('pytorch/vision:v0.10.0', model_name[model_type], pretrained=False)
+            # build model
+            if is_pretrained:
+                # model = torch.hub.load('pytorch/vision:v0.10.0', model_name[model_type], pretrained=True)
+                model=torchvision.models.densenet121(pretrained=True)
+            else:
+                model = torch.hub.load('pytorch/vision:v0.10.0', model_name[model_type], pretrained=False)
+
+
         # for child in model.named_children():
         #     print(child)
         if is_dropout:
+            # print(feature_dim[model_type])
             classifier = nn.Sequential(
                 nn.Dropout(0.25),
                 nn.Linear(feature_dim[model_type], 32),
@@ -187,8 +202,9 @@ if repeat_time >= 1:
             pbar = tqdm(total=len(train_dataloader))
             for batch, (X, y) in enumerate(train_dataloader):
                 imgs = X.to(device)
-                y_hat = model(imgs)
                 y = (y).type(torch.LongTensor).to(device)
+                y_hat = model(imgs)
+                
                 loss = loss_fn(y_hat, y)
                 optimizer.zero_grad()
                 loss.backward()
@@ -230,6 +246,7 @@ if repeat_time >= 1:
         total_test_accs.append(test_accs[-1])
         if save_all & is_save:
             torch.save(model.state_dict(), save_path[:-4]+ "_" + str(i) + ".pth")
+            print("save successfully")
 end_time = time.time()
 mean_train_acc = np.mean(total_train_accs)
 var_train_acc = np.var(total_train_accs)
