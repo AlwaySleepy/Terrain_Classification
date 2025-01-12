@@ -1,3 +1,4 @@
+import random
 import torch
 from torch import nn
 import h5py
@@ -14,8 +15,8 @@ import configparser
 from config.config_train import config
 import argparse
 import time
-from model.Densenet import ModifiedDenseNet121
-from model.Densenet import modified_densenet
+from losses import FocalLoss, SupervisedContrastiveLoss
+
 
 import torchvision
 
@@ -42,9 +43,9 @@ parser.add_argument('--is_dropout', required=False, action="store_true")
 parser.add_argument('--model_type', required=False, type=str, default="mobilenet", help="mobilenet, resnet, densenet")
 args = parser.parse_known_args()[0]
 
-# if no parameters are passed by command line parameters, use config parameters in ./config/config_train.py 
+# if no parameters are passed by command line parameters, use config parameters in ./config/config_train.py
 print("sys.argv: ", sys.argv)
-print("args: ", args)   
+print("args: ", args)
 if len(sys.argv) == 1:
     print("using config file:")
     batch_size = config.batch_size
@@ -127,8 +128,8 @@ def load_data(datapath, mode='train'):
     data = ImageDataset(labels, images, transform=transform)
     print(len(data), "# data length")
     return data
-model_name = {"mobilenet": "mobilenet_v2", "resnet": "resnet50", "densenet": "densenet121","m_densenet":"modified_densenet","mix_densenet":"mix_densenet"}
-feature_dim = {"mobilenet": 1280, "resnet": 2048, "densenet": 1024,"m_densenet":490,"mix_densenet":490}
+model_name = {"mobilenet": "mobilenet_v2", "resnet": "resnet50", "densenet": "densenet121","fft_res":"fft_resnet"}
+feature_dim = {"mobilenet": 1280, "resnet": 2048, "densenet": 1024,"fft_res":512}
 start_time = time.time()
 print("trainset:")
 training_data = load_data(train_datapath)
@@ -141,12 +142,10 @@ total_test_accs = []
 if repeat_time >= 1:
     for i in range(repeat_time):
         print("repeat_time: ", i+1)
-        if model_name[model_type] == "modified_densenet":
-            model=modified_densenet
-        elif model_name[model_type] == "mix_densenet":
-            print("mix_densenet!!!")
-            from model.Mix_Densenet import mix_densenet
-            model = mix_densenet
+
+        if model_name[model_type] =="fft_resnet":
+            from model.fft_resnet import resnet50
+            model = resnet50(device="cuda:0",classes=10,network='resnet50')
         else:
             # build model
             if is_pretrained:
@@ -173,8 +172,9 @@ if repeat_time >= 1:
                 nn.Linear(feature_dim[model_type], 32),
                 nn.Linear(32, n_classes),
             )
-        if model_type == "resnet":
-            model.fc = classifier
+
+        if model_name[model_type] == "fft_resnet":
+            pass
         else:
             model.classifier = classifier
         # only finetune classifier
@@ -191,6 +191,12 @@ if repeat_time >= 1:
         test_losses = []
         test_accs = []
         loss_fn = nn.CrossEntropyLoss()
+
+        alpha=[0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
+
+        loss_focal=FocalLoss(alpha=alpha)
+        loss_contrastive = SupervisedContrastiveLoss()
+
         optimizer = torch.optim.Adam(filter(lambda p: p.requires_grad, model.parameters()), lr=learning_rate)
         # learning rate decay
         scheduler = torch.optim.lr_scheduler.ExponentialLR(optimizer, gamma=lr_decay, last_epoch=-1)
@@ -201,11 +207,33 @@ if repeat_time >= 1:
             total = 0
             pbar = tqdm(total=len(train_dataloader))
             for batch, (X, y) in enumerate(train_dataloader):
+                # if model_name[model_type] == "fft_densenet" or model_name[model_type] == "modified_densenet":
+                #     # fft_imgs = torch.tensor([model.fourier_transform(x) for x in X.numpy()]).to(device)
+                #     fft_imgs_list = [model.fourier_transform(x) for x in X.numpy()]
+                #     # 将列表转为单个 NumPy 数组
+                #     fft_imgs_np = np.array(fft_imgs_list)
+
+                #     # 再将 NumPy 数组转换为 PyTorch 张量
+                #     fft_imgs = torch.from_numpy(fft_imgs_np).to(device)
+
                 imgs = X.to(device)
                 y = (y).type(torch.LongTensor).to(device)
-                y_hat = model(imgs)
-                
-                loss = loss_fn(y_hat, y)
+
+                if model_name[model_type] == "fft_resnet":
+                    aug_list = ['spatial_dropout', 'freq_dropout', 'freq_noise', 'freq_mixup']
+                    # p = ((epoch+1) / epochs) ** 0.5 * 0.8
+                    # if p<0.5:
+                    #     p=0.5
+                    y_hat= model(imgs, labels=y, aug_mode=random.choice(aug_list))
+                    features=model.get_features(imgs)
+                else:
+                    y_hat = model(imgs)
+
+                loss = loss_focal(y_hat, y)
+                if model_name[model_type] == "fft_resnet":
+                    loss_contrast = loss_contrastive(features, y)
+                    # print(loss_contrast)
+                    loss = 10*loss + 0.2*loss_contrast
                 optimizer.zero_grad()
                 loss.backward()
                 optimizer.step()
@@ -216,37 +244,68 @@ if repeat_time >= 1:
                 pbar.set_description(f"epoch {epoch+1}")
                 pbar.set_postfix(loss=f"{loss.item():>7f}", accuracy=f"{total_correct/total:>7f}")
                 pbar.update(1)
+
+                # del fft_imgs
+                # torch.cuda.empty_cache()
+
             pbar.close()
             print(f"In epoch {epoch+1}, total train accuracy: {total_correct/total:>7f}, mean loss: {np.mean(loss_list):>7f}")
             train_losses.append(np.mean(loss_list))
             train_accs.append((total_correct/total).item())
             scheduler.step()
+
+            torch.cuda.empty_cache()
             model.eval()
             pbar = tqdm(total = len(test_dataloader))
             loss_list = []
             total_correct = 0
             total = 0
-            for batch, (X, y) in enumerate(test_dataloader):
-                imgs = X.to(device)
-                y_hat = model(imgs)
-                y = (y).type(torch.LongTensor).to(device)
-                loss = loss_fn(y_hat, y)
-                correct = torch.sum(torch.argmax(y_hat, dim=1) == y)
-                total_correct += correct
-                total += len(y)
-                loss_list.append(loss.item())
-                pbar.set_description(f"epoch {epoch+1}")
-                pbar.set_postfix(accuracy=f"{total_correct/total:>7f}")
-                pbar.update(1)
+            with torch.no_grad():
+                for batch, (X, y) in enumerate(test_dataloader):
+                    # if model_name[model_type] == "fft_densenet" or model_name[model_type] == "modified_densenet":
+                    #     # fft_imgs = torch.tensor([model.fourier_transform(x) for x in X.numpy()]).to(device)
+                    #     fft_imgs_list = [model.fourier_transform(x) for x in X.numpy()]
+                    #     # 将列表转为单个 NumPy 数组
+                    #     fft_imgs_np = np.array(fft_imgs_list)
+
+                    #     # 再将 NumPy 数组转换为 PyTorch 张量
+                    #     fft_imgs = torch.from_numpy(fft_imgs_np).to(device)
+
+                    imgs = X.to(device)
+                    y = (y).type(torch.LongTensor).to(device)
+                    # if model_name[model_type] == "fft_densenet":
+                    #     y_hat = model(imgs, fft_imgs)
+                    # elif model_name[model_type] == "modified_densenet":
+                    #     y_hat = model(fft_imgs)
+                    # elif model_name[model_type] == "fft_resnet":
+                    #     y_hat = model(imgs, aug_mode='freq_dropout')
+             
+                    y_hat = model(imgs)
+                    # imgs = X.to(device)
+                    # y_hat = model(imgs)
+                    y = (y).type(torch.LongTensor).to(device)
+                    loss = loss_focal(y_hat, y)
+                    correct = torch.sum(torch.argmax(y_hat, dim=1) == y)
+                    total_correct += correct
+                    total += len(y)
+                    loss_list.append(loss.item())
+                    pbar.set_description(f"epoch {epoch+1}")
+                    pbar.set_postfix(accuracy=f"{total_correct/total:>7f}")
+                    pbar.update(1)
+                    # del fft_imgs
+                    # torch.cuda.empty_cache()
+
             pbar.close()
             print(f"In epoch {epoch+1}, total test accuracy: {total_correct/total:>7f}, mean loss: {np.mean(loss_list):>7f}")
             test_losses.append(np.mean(loss_list))
             test_accs.append((total_correct/total).item())
+            if (epoch+1)%6==0:
+                if is_save:
+                    torch.save(model.state_dict(), save_path[:-4]+ "_" + str(epoch+1) + ".pth")
+                    print("save successfully")
         total_train_accs.append(train_accs[-1])
         total_test_accs.append(test_accs[-1])
-        if save_all & is_save:
-            torch.save(model.state_dict(), save_path[:-4]+ "_" + str(i) + ".pth")
-            print("save successfully")
+
 end_time = time.time()
 mean_train_acc = np.mean(total_train_accs)
 var_train_acc = np.var(total_train_accs)
@@ -288,7 +347,7 @@ with open('./record/' + folder_name + '/loss_acc.txt', 'w') as f:
     for i in total_test_accs:
         f.write(str(i) + ", ")
     f.write("total process time: " + str(end_time - start_time) + "seconds\n")
-    
+
 # plot loss and accuracy
 epoch_x = np.arange(epochs)+1
 plt.figure()

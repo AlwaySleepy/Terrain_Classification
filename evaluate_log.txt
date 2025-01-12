@@ -1,0 +1,1072 @@
+model_path: model/fft_res/fft_res_hard_mix_6.pth
+class:  asphalt  precision:  0.44325481798715205
+class:  grass  precision:  0.9956140350877193
+class:  cement  precision:  0.3493150684931507
+class:  board  precision:  nan
+class:  brick  precision:  0.9555555555555556
+class:  gravel  precision:  0.3467741935483871
+class:  sand  precision:  1.0
+class:  flagstone  precision:  0.35874439461883406
+class:  plastic  precision:  0.345
+class:  soil  precision:  0.3728813559322034
+total accurracy is: 0.46307829181494664
+
+model_path: model/fft_res/fft_res_hard_mix_12.pth
+class:  asphalt  precision:  0.7024390243902439
+class:  grass  precision:  0.4837758112094395
+class:  cement  precision:  0.33052631578947367
+class:  board  precision:  0.3333333333333333
+class:  brick  precision:  0.9530201342281879
+class:  gravel  precision:  0.09308510638297872
+class:  sand  precision:  0.8620689655172413
+class:  flagstone  precision:  0.4585365853658537
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.436241610738255
+total accurracy is: 0.4555160142348754
+
+model_path: model/fft_res/fft_res_hard_mix_18.pth
+class:  asphalt  precision:  0.49806201550387597
+class:  grass  precision:  0.6497890295358649
+class:  cement  precision:  0.32706766917293234
+class:  board  precision:  0.5
+class:  brick  precision:  0.972972972972973
+class:  gravel  precision:  0.13310580204778158
+class:  sand  precision:  0.8717948717948718
+class:  flagstone  precision:  0.44
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.7345132743362832
+total accurracy is: 0.5040035587188612
+
+model_path: model/fft_res/fft_res_hard_mix_24.pth
+class:  asphalt  precision:  0.5973154362416108
+class:  grass  precision:  0.7225806451612903
+class:  cement  precision:  0.4768211920529801
+class:  board  precision:  0.875
+class:  brick  precision:  0.94375
+class:  gravel  precision:  0.13559322033898305
+class:  sand  precision:  0.631578947368421
+class:  flagstone  precision:  0.4553734061930783
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.5533333333333333
+total accurracy is: 0.5311387900355872
+
+model_path: model/fft_res/fft_res_hard_mix_30.pth
+class:  asphalt  precision:  0.5208333333333334
+class:  grass  precision:  0.704225352112676
+class:  cement  precision:  0.41543026706231456
+class:  board  precision:  0.3333333333333333
+class:  brick  precision:  0.9590643274853801
+class:  gravel  precision:  0.14186851211072665
+class:  sand  precision:  0.7578947368421053
+class:  flagstone  precision:  0.4497907949790795
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.6014492753623188
+total accurracy is: 0.5151245551601423
+
+model_path: model/fft_res/fft_res_hard_mix_36.pth
+class:  asphalt  precision:  0.4961038961038961
+class:  grass  precision:  0.8195488721804511
+class:  cement  precision:  0.3713646532438479
+class:  board  precision:  nan
+class:  brick  precision:  0.9789473684210527
+class:  gravel  precision:  0.1388888888888889
+class:  sand  precision:  0.6194690265486725
+class:  flagstone  precision:  0.4188376753507014
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.6535433070866141
+total accurracy is: 0.498220640569395
+
+model_path: model/fft_res/fft_res_hard_mix_42.pth
+class:  asphalt  precision:  0.541033434650456
+class:  grass  precision:  0.8174603174603174
+class:  cement  precision:  0.3969849246231156
+class:  board  precision:  0.0
+class:  brick  precision:  0.9417989417989417
+class:  gravel  precision:  0.13804713804713806
+class:  sand  precision:  0.7553191489361702
+class:  flagstone  precision:  0.36363636363636365
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.5555555555555556
+total accurracy is: 0.4875444839857651
+
+model_path: model/fft_res/fft_res_hard_mix_48.pth
+class:  asphalt  precision:  0.5443786982248521
+class:  grass  precision:  0.6192893401015228
+class:  cement  precision:  0.35456475583864117
+class:  board  precision:  0.6666666666666666
+class:  brick  precision:  0.9720670391061452
+class:  gravel  precision:  0.14590747330960854
+class:  sand  precision:  0.6068376068376068
+class:  flagstone  precision:  0.4630071599045346
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.5
+total accurracy is: 0.49377224199288255
+
+model_path: model/fft_res/fft_res_hard_mix_54.pth
+class:  asphalt  precision:  0.5359281437125748
+class:  grass  precision:  0.6962025316455697
+class:  cement  precision:  0.4020618556701031
+class:  board  precision:  1.0
+class:  brick  precision:  0.9672131147540983
+class:  gravel  precision:  0.14963503649635038
+class:  sand  precision:  0.6513761467889908
+class:  flagstone  precision:  0.40714285714285714
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.4857142857142857
+total accurracy is: 0.49555160142348753
+
+model_path: model/fft_res/fft_res_hard_mix_60.pth
+class:  asphalt  precision:  0.5205882352941177
+class:  grass  precision:  0.7061855670103093
+class:  cement  precision:  0.4005102040816326
+class:  board  precision:  0.25
+class:  brick  precision:  0.967741935483871
+class:  gravel  precision:  0.14285714285714285
+class:  sand  precision:  0.6422018348623854
+class:  flagstone  precision:  0.4375
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.551948051948052
+total accurracy is: 0.5080071174377224
+
+model_path: model/fft_res/fft_res_hard_mix_66.pth
+class:  asphalt  precision:  0.6278195488721805
+class:  grass  precision:  0.616580310880829
+class:  cement  precision:  0.4105793450881612
+class:  board  precision:  0.0
+class:  brick  precision:  0.9513513513513514
+class:  gravel  precision:  0.148014440433213
+class:  sand  precision:  0.75
+class:  flagstone  precision:  0.41114982578397213
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.4473684210526316
+total accurracy is: 0.5004448398576512
+
+model_path: model/fft_res/fft_res_hard_mix_72.pth
+class:  asphalt  precision:  0.509641873278237
+class:  grass  precision:  0.7426470588235294
+class:  cement  precision:  0.3803827751196172
+class:  board  precision:  nan
+class:  brick  precision:  0.9664804469273743
+class:  gravel  precision:  0.15018315018315018
+class:  sand  precision:  0.6153846153846154
+class:  flagstone  precision:  0.3970856102003643
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.5743243243243243
+total accurracy is: 0.4888790035587189
+
+model_path: model/fft_res/fft_res_hard_mix_78.pth
+class:  asphalt  precision:  0.5678233438485805
+class:  grass  precision:  0.6685393258426966
+class:  cement  precision:  0.3880952380952381
+class:  board  precision:  nan
+class:  brick  precision:  0.973404255319149
+class:  gravel  precision:  0.14695340501792115
+class:  sand  precision:  0.6792452830188679
+class:  flagstone  precision:  0.4455852156057495
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.41545893719806765
+total accurracy is: 0.5013345195729537
+
+model_path: model/fft_res/fft_res_hard_mix_84.pth
+class:  asphalt  precision:  0.5816993464052288
+class:  grass  precision:  0.5864978902953587
+class:  cement  precision:  0.3773148148148148
+class:  board  precision:  1.0
+class:  brick  precision:  0.9625668449197861
+class:  gravel  precision:  0.1576923076923077
+class:  sand  precision:  0.6396396396396397
+class:  flagstone  precision:  0.4271653543307087
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.6071428571428571
+total accurracy is: 0.5075622775800712
+
+model_path: model/fft_res/fft_res_hard_mix_90.pth
+class:  asphalt  precision:  0.5682539682539682
+class:  grass  precision:  0.65
+class:  cement  precision:  0.38424821002386633
+class:  board  precision:  0.3333333333333333
+class:  brick  precision:  0.9715909090909091
+class:  gravel  precision:  0.15073529411764705
+class:  sand  precision:  0.696078431372549
+class:  flagstone  precision:  0.44621513944223107
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.5029239766081871
+total accurracy is: 0.5093416370106761
+
+model_path: model/fft_res/fft_res_hard_mix_96.pth
+class:  asphalt  precision:  0.5211267605633803
+class:  grass  precision:  0.6442953020134228
+class:  cement  precision:  0.38847117794486213
+class:  board  precision:  1.0
+class:  brick  precision:  0.9710982658959537
+class:  gravel  precision:  0.15471698113207547
+class:  sand  precision:  0.568
+class:  flagstone  precision:  0.4106813996316759
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.5
+total accurracy is: 0.48576512455516013
+
+model_path: model/fft_res/fft_res_hard_mix_102.pth
+class:  asphalt  precision:  0.5587301587301587
+class:  grass  precision:  0.6516129032258065
+class:  cement  precision:  0.3778280542986425
+class:  board  precision:  nan
+class:  brick  precision:  0.9528795811518325
+class:  gravel  precision:  0.14642857142857144
+class:  sand  precision:  0.6153846153846154
+class:  flagstone  precision:  0.41130604288499023
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.5029585798816568
+total accurracy is: 0.48976868327402134
+
+model_path: model/fft_res/fft_res_hard_trick_6.pth
+class:  asphalt  precision:  0.6227848101265823
+class:  grass  precision:  0.27631578947368424
+class:  cement  precision:  0.28256513026052105
+class:  board  precision:  1.0
+class:  brick  precision:  0.6875
+class:  gravel  precision:  0.15625
+class:  sand  precision:  0.6764705882352942
+class:  flagstone  precision:  0.4
+class:  plastic  precision:  0.6327433628318584
+class:  soil  precision:  0.2
+total accurracy is: 0.4319395017793594
+
+model_path: model/fft_res/fft_res_hard_trick_12.pth
+class:  asphalt  precision:  0.47368421052631576
+class:  grass  precision:  0.9230769230769231
+class:  cement  precision:  0.25
+class:  board  precision:  0.3333333333333333
+class:  brick  precision:  0.8291139240506329
+class:  gravel  precision:  0.19642857142857142
+class:  sand  precision:  0.8275862068965517
+class:  flagstone  precision:  0.3276595744680851
+class:  plastic  precision:  0.3974358974358974
+class:  soil  precision:  0.10909090909090909
+total accurracy is: 0.3790035587188612
+
+model_path: model/fft_res/fft_res_hard_trick_18.pth
+class:  asphalt  precision:  0.41767068273092367
+class:  grass  precision:  0.7692307692307693
+class:  cement  precision:  0.22193211488250653
+class:  board  precision:  0.3333333333333333
+class:  brick  precision:  0.6772486772486772
+class:  gravel  precision:  0.12396694214876033
+class:  sand  precision:  0.8
+class:  flagstone  precision:  0.3373083475298126
+class:  plastic  precision:  0.7666666666666667
+class:  soil  precision:  0.576271186440678
+total accurracy is: 0.40213523131672596
+
+model_path: model/fft_res/fft_res_hard_trick_24.pth
+class:  asphalt  precision:  0.4355179704016913
+class:  grass  precision:  0.8869565217391304
+class:  cement  precision:  0.208955223880597
+class:  board  precision:  0.3333333333333333
+class:  brick  precision:  0.4752475247524752
+class:  gravel  precision:  0.15168539325842698
+class:  sand  precision:  0.30434782608695654
+class:  flagstone  precision:  0.3850267379679144
+class:  plastic  precision:  0.8095238095238095
+class:  soil  precision:  0.3090909090909091
+total accurracy is: 0.36743772241992884
+
+model_path: model/fft_res/fft_res_hard_trick_30.pth
+class:  asphalt  precision:  0.3033175355450237
+class:  grass  precision:  0.9154929577464789
+class:  cement  precision:  0.15157116451016636
+class:  board  precision:  0.6666666666666666
+class:  brick  precision:  0.7849462365591398
+class:  gravel  precision:  0.1069182389937107
+class:  sand  precision:  0.6888888888888889
+class:  flagstone  precision:  0.2656546489563567
+class:  plastic  precision:  0.7368421052631579
+class:  soil  precision:  0.4639175257731959
+total accurracy is: 0.31183274021352314
+
+model_path: model/fft_res/fft_res_hard_trick_36.pth
+class:  asphalt  precision:  0.471326164874552
+class:  grass  precision:  0.7062937062937062
+class:  cement  precision:  0.15625
+class:  board  precision:  1.0
+class:  brick  precision:  0.6276150627615062
+class:  gravel  precision:  0.2198581560283688
+class:  sand  precision:  0.875
+class:  flagstone  precision:  0.43898305084745765
+class:  plastic  precision:  0.9875
+class:  soil  precision:  0.45045045045045046
+total accurracy is: 0.452846975088968
+
+model_path: model/fft_res/fft_res_hard_trick_42.pth
+class:  asphalt  precision:  0.5348258706467661
+class:  grass  precision:  0.4340659340659341
+class:  cement  precision:  0.08579881656804733
+class:  board  precision:  0.6666666666666666
+class:  brick  precision:  0.5504587155963303
+class:  gravel  precision:  0.026905829596412557
+class:  sand  precision:  0.92
+class:  flagstone  precision:  0.2653333333333333
+class:  plastic  precision:  0.9117647058823529
+class:  soil  precision:  0.3
+total accurracy is: 0.3274021352313167
+
+model_path: model/fft_res/fft_res_hard_trick_48.pth
+class:  asphalt  precision:  0.5
+class:  grass  precision:  0.21965317919075145
+class:  cement  precision:  0.3132530120481928
+class:  board  precision:  0.75
+class:  brick  precision:  0.7986111111111112
+class:  gravel  precision:  0.06796116504854369
+class:  sand  precision:  0.0
+class:  flagstone  precision:  0.3595206391478029
+class:  plastic  precision:  0.6666666666666666
+class:  soil  precision:  0.2994011976047904
+total accurracy is: 0.36743772241992884
+
+model_path: model/fft_res/fft_res_hard_trick_54.pth
+class:  asphalt  precision:  0.45774647887323944
+class:  grass  precision:  0.463302752293578
+class:  cement  precision:  0.32748538011695905
+class:  board  precision:  0.5555555555555556
+class:  brick  precision:  0.18181818181818182
+class:  gravel  precision:  0.005649717514124294
+class:  sand  precision:  0.84
+class:  flagstone  precision:  0.269811320754717
+class:  plastic  precision:  0.7279411764705882
+class:  soil  precision:  0.1836734693877551
+total accurracy is: 0.3429715302491103
+
+model_path: model/fft_res/fft_res_hard_trick_60.pth
+class:  asphalt  precision:  0.5777202072538861
+class:  grass  precision:  0.40594059405940597
+class:  cement  precision:  0.265993265993266
+class:  board  precision:  0.8
+class:  brick  precision:  0.7241379310344828
+class:  gravel  precision:  0.12624584717607973
+class:  sand  precision:  0.7065217391304348
+class:  flagstone  precision:  0.2854984894259819
+class:  plastic  precision:  0.5066666666666667
+class:  soil  precision:  0.41964285714285715
+total accurracy is: 0.3776690391459075
+
+
+model_path: model/fft_res/fft_res_hard_trick_6.pth
+class:  asphalt  precision:  0.4910025706940874
+class:  grass  precision:  0.8251748251748252
+class:  cement  precision:  0.09302325581395349
+class:  board  precision:  0.0
+class:  brick  precision:  0.9583333333333334
+class:  gravel  precision:  0.024390243902439025
+class:  sand  precision:  0.0
+class:  flagstone  precision:  0.18640350877192982
+class:  plastic  precision:  0.4
+class:  soil  precision:  0.08333333333333333
+total accurracy is: 0.4288256227758007
+
+model_path: model/fft_res/fft_res_hard_trick_12.pth
+class:  asphalt  precision:  0.5429362880886427
+class:  grass  precision:  0.6276041666666666
+class:  cement  precision:  0.21694214876033058
+class:  board  precision:  0.5
+class:  brick  precision:  0.8571428571428571
+class:  gravel  precision:  0.2975206611570248
+class:  sand  precision:  0.7808219178082192
+class:  flagstone  precision:  0.2964426877470356
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.3333333333333333
+total accurracy is: 0.4541814946619217
+
+model_path: model/fft_res/fft_res_hard_trick_18.pth
+class:  asphalt  precision:  0.5961995249406176
+class:  grass  precision:  0.5442764578833693
+class:  cement  precision:  0.2711864406779661
+class:  board  precision:  0.0
+class:  brick  precision:  0.8992805755395683
+class:  gravel  precision:  0.22388059701492538
+class:  sand  precision:  0.9833333333333333
+class:  flagstone  precision:  0.3735763097949886
+class:  plastic  precision:  0.9838709677419355
+class:  soil  precision:  0.6548672566371682
+total accurracy is: 0.521797153024911
+
+model_path: model/fft_res/fft_res_hard_trick_24.pth
+class:  asphalt  precision:  0.6902654867256637
+class:  grass  precision:  0.5094850948509485
+class:  cement  precision:  0.2564102564102564
+class:  board  precision:  0.25
+class:  brick  precision:  0.888235294117647
+class:  gravel  precision:  0.31896551724137934
+class:  sand  precision:  0.9074074074074074
+class:  flagstone  precision:  0.3952254641909814
+class:  plastic  precision:  0.9821428571428571
+class:  soil  precision:  0.2302158273381295
+total accurracy is: 0.4697508896797153
+
+model_path: model/fft_res/fft_res_hard_trick_30.pth
+class:  asphalt  precision:  0.43410852713178294
+class:  grass  precision:  0.5
+class:  cement  precision:  0.27461139896373055
+class:  board  precision:  nan
+class:  brick  precision:  0.9386503067484663
+class:  gravel  precision:  0.2265625
+class:  sand  precision:  0.8765432098765432
+class:  flagstone  precision:  0.3816793893129771
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.5135135135135135
+total accurracy is: 0.46441281138790036
+
+
+
+
+model_path: model/fft_res/fft_res_hard_focal_6.pth
+class:  asphalt  precision:  0.5636792452830188
+class:  grass  precision:  0.4387755102040816
+class:  cement  precision:  0.29411764705882354
+class:  board  precision:  0.3333333333333333
+class:  brick  precision:  0.9754098360655737
+class:  gravel  precision:  0.3524590163934426
+class:  sand  precision:  0.26101694915254237
+class:  flagstone  precision:  0.2845849802371542
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.3181818181818182
+total accurracy is: 0.41770462633451955
+
+model_path: model/fft_res/fft_res_hard_focal_12.pth
+class:  asphalt  precision:  0.5212014134275619
+class:  grass  precision:  0.49404761904761907
+class:  cement  precision:  0.3475609756097561
+class:  board  precision:  1.0
+class:  brick  precision:  0.9576271186440678
+class:  gravel  precision:  0.15302491103202848
+class:  sand  precision:  0.6065573770491803
+class:  flagstone  precision:  0.435126582278481
+class:  plastic  precision:  0.6224489795918368
+class:  soil  precision:  0.46938775510204084
+total accurracy is: 0.46619217081850534
+
+model_path: model/fft_res/fft_res_hard_focal_18.pth
+class:  asphalt  precision:  0.6612244897959184
+class:  grass  precision:  0.49635036496350365
+class:  cement  precision:  0.39295392953929537
+class:  board  precision:  nan
+class:  brick  precision:  0.9285714285714286
+class:  gravel  precision:  0.2048780487804878
+class:  sand  precision:  0.6746987951807228
+class:  flagstone  precision:  0.3299492385786802
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.35175879396984927
+total accurracy is: 0.47419928825622776
+
+model_path: model/fft_res/fft_res_hard_focal_24.pth
+class:  asphalt  precision:  0.5423728813559322
+class:  grass  precision:  0.7986577181208053
+class:  cement  precision:  0.4087193460490463
+class:  board  precision:  1.0
+class:  brick  precision:  0.9101796407185628
+class:  gravel  precision:  0.2986111111111111
+class:  sand  precision:  0.7526881720430108
+class:  flagstone  precision:  0.38733705772811916
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.7027027027027027
+total accurracy is: 0.5400355871886121
+
+model_path: model/fft_res/fft_res_hard_focal_30.pth
+class:  asphalt  precision:  0.6932773109243697
+class:  grass  precision:  0.5855513307984791
+class:  cement  precision:  0.43558282208588955
+class:  board  precision:  1.0
+class:  brick  precision:  0.9770992366412213
+class:  gravel  precision:  0.2107843137254902
+class:  sand  precision:  0.8904109589041096
+class:  flagstone  precision:  0.41379310344827586
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.44502617801047123
+total accurracy is: 0.5449288256227758
+
+
+
+
+
+
+
+
+
+
+
+model_path: model/fft_res/fft_res_hard_focalmore_6.pth
+class:  asphalt  precision:  0.5868055555555556
+class:  grass  precision:  0.481421647819063
+class:  cement  precision:  0.4375
+class:  board  precision:  1.0
+class:  brick  precision:  0.8217391304347826
+class:  gravel  precision:  0.07142857142857142
+class:  sand  precision:  0.3945945945945946
+class:  flagstone  precision:  0.7294520547945206
+class:  plastic  precision:  0.9701492537313433
+class:  soil  precision:  0.2608695652173913
+total accurracy is: 0.5609430604982206
+
+model_path: model/fft_res/fft_res_hard_focalmore_12.pth
+class:  asphalt  precision:  0.5840220385674931
+class:  grass  precision:  0.556910569105691
+class:  cement  precision:  0.323943661971831
+class:  board  precision:  0.6666666666666666
+class:  brick  precision:  0.8826086956521739
+class:  gravel  precision:  0.0893854748603352
+class:  sand  precision:  0.5234375
+class:  flagstone  precision:  0.6022727272727273
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.3402061855670103
+total accurracy is: 0.47419928825622776
+
+model_path: model/fft_res/fft_res_hard_focalmore_18.pth
+class:  asphalt  precision:  0.6095444685466378
+class:  grass  precision:  0.55
+class:  cement  precision:  0.41124260355029585
+class:  board  precision:  0.6666666666666666
+class:  brick  precision:  0.959349593495935
+class:  gravel  precision:  0.1411764705882353
+class:  sand  precision:  0.8375
+class:  flagstone  precision:  0.4354066985645933
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.39344262295081966
+total accurracy is: 0.49110320284697506
+
+model_path: model/fft_res/fft_res_hard_focalmore_24.pth
+class:  asphalt  precision:  0.6381909547738693
+class:  grass  precision:  0.7832699619771863
+class:  cement  precision:  0.3867924528301887
+class:  board  precision:  0.84
+class:  brick  precision:  0.9421965317919075
+class:  gravel  precision:  0.0642570281124498
+class:  sand  precision:  0.8928571428571429
+class:  flagstone  precision:  0.5429362880886427
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.3981042654028436
+total accurracy is: 0.5511565836298933
+
+model_path: model/fft_res/fft_res_hard_focalmore_30.pth
+class:  asphalt  precision:  0.6062992125984252
+class:  grass  precision:  0.6437246963562753
+class:  cement  precision:  0.4126984126984127
+class:  board  precision:  1.0
+class:  brick  precision:  0.9611111111111111
+class:  gravel  precision:  0.12367491166077739
+class:  sand  precision:  0.8875
+class:  flagstone  precision:  0.4885654885654886
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.4772727272727273
+total accurracy is: 0.5275800711743772
+
+model_path: model/fft_res/fft_res_hard_focalmore_36.pth
+class:  asphalt  precision:  0.5290178571428571
+class:  grass  precision:  0.7510917030567685
+class:  cement  precision:  0.3665893271461717
+class:  board  precision:  0.95
+class:  brick  precision:  0.9033816425120773
+class:  gravel  precision:  0.11284046692607004
+class:  sand  precision:  0.7956989247311828
+class:  flagstone  precision:  0.5243553008595988
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.4880952380952381
+total accurracy is: 0.5280249110320284
+
+model_path: model/fft_res/fft_res_hard_focalmore_42.pth
+class:  asphalt  precision:  0.5690072639225182
+class:  grass  precision:  0.668918918918919
+class:  cement  precision:  0.4067357512953368
+class:  board  precision:  1.0
+class:  brick  precision:  0.9453551912568307
+class:  gravel  precision:  0.11619718309859155
+class:  sand  precision:  0.9113924050632911
+class:  flagstone  precision:  0.433852140077821
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.3883495145631068
+total accurracy is: 0.49243772241992884
+
+model_path: model/fft_res/fft_res_hard_focalmore_48.pth
+class:  asphalt  precision:  0.514
+class:  grass  precision:  0.5925925925925926
+class:  cement  precision:  0.37435897435897436
+class:  board  precision:  1.0
+class:  brick  precision:  0.9388888888888889
+class:  gravel  precision:  0.0946969696969697
+class:  sand  precision:  0.8888888888888888
+class:  flagstone  precision:  0.3835616438356164
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.5460526315789473
+total accurracy is: 0.4679715302491103
+
+model_path: model/fft_res/fft_res_hard_focalmore_54.pth
+class:  asphalt  precision:  0.5234741784037559
+class:  grass  precision:  0.6050955414012739
+class:  cement  precision:  0.39195979899497485
+class:  board  precision:  1.0
+class:  brick  precision:  0.9470899470899471
+class:  gravel  precision:  0.10780669144981413
+class:  sand  precision:  0.9113924050632911
+class:  flagstone  precision:  0.3897058823529412
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.5029239766081871
+total accurracy is: 0.474644128113879
+
+model_path: model/fft_res/fft_res_hard_focalmore_60.pth
+class:  asphalt  precision:  0.5381165919282511
+class:  grass  precision:  0.631578947368421
+class:  cement  precision:  0.3940149625935162
+class:  board  precision:  1.0
+class:  brick  precision:  0.953125
+class:  gravel  precision:  0.11870503597122302
+class:  sand  precision:  0.8522727272727273
+class:  flagstone  precision:  0.5036319612590799
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.3788546255506608
+total accurracy is: 0.49644128113879005
+
+
+
+
+model_path: model/fft_res/fft_res_entry_focalmore_6.pth
+class:  asphalt  precision:  0.9768637532133676
+class:  grass  precision:  0.9704301075268817
+class:  cement  precision:  0.7142857142857143
+class:  board  precision:  0.972972972972973
+class:  brick  precision:  0.9890710382513661
+class:  gravel  precision:  0.8518518518518519
+class:  sand  precision:  0.9411764705882353
+class:  flagstone  precision:  0.9561855670103093
+class:  plastic  precision:  0.9970059880239521
+class:  soil  precision:  0.9047619047619048
+total accurracy is: 0.9329014345210551
+
+model_path: model/fft_res/fft_res_entry_focalmore_12.pth
+class:  asphalt  precision:  0.9704433497536946
+class:  grass  precision:  0.9837837837837838
+class:  cement  precision:  0.9177489177489178
+class:  board  precision:  1.0
+class:  brick  precision:  1.0
+class:  gravel  precision:  0.94
+class:  sand  precision:  0.9864864864864865
+class:  flagstone  precision:  0.9624060150375939
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.9538461538461539
+total accurracy is: 0.972697825080981
+
+model_path: model/fft_res/fft_res_entry_focalmore_18.pth
+class:  asphalt  precision:  0.9949109414758269
+class:  grass  precision:  0.986449864498645
+class:  cement  precision:  0.9316239316239316
+class:  board  precision:  0.975609756097561
+class:  brick  precision:  0.9692307692307692
+class:  gravel  precision:  0.9791666666666666
+class:  sand  precision:  0.9746835443037974
+class:  flagstone  precision:  0.9846938775510204
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.984375
+total accurracy is: 0.98149005090236
+
+model_path: model/fft_res/fft_res_entry_focalmore_24.pth
+class:  asphalt  precision:  0.9924433249370277
+class:  grass  precision:  0.986449864498645
+class:  cement  precision:  0.941908713692946
+class:  board  precision:  1.0
+class:  brick  precision:  0.9947368421052631
+class:  gravel  precision:  0.9791666666666666
+class:  sand  precision:  1.0
+class:  flagstone  precision:  0.9923273657289002
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.9841269841269841
+total accurracy is: 0.987043035631652
+
+model_path: model/fft_res/fft_res_entry_focalmore_30.pth
+class:  asphalt  precision:  0.9949494949494949
+class:  grass  precision:  0.9891304347826086
+class:  cement  precision:  0.946058091286307
+class:  board  precision:  1.0
+class:  brick  precision:  0.9895287958115183
+class:  gravel  precision:  0.9791666666666666
+class:  sand  precision:  1.0
+class:  flagstone  precision:  0.9948717948717949
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.9696969696969697
+total accurracy is: 0.987968533086534
+
+model_path: model/fft_res/fft_res_entry_focalmore_36.pth
+class:  asphalt  precision:  0.9949494949494949
+class:  grass  precision:  0.9891304347826086
+class:  cement  precision:  0.9737991266375546
+class:  board  precision:  1.0
+class:  brick  precision:  0.9947368421052631
+class:  gravel  precision:  0.9791666666666666
+class:  sand  precision:  1.0
+class:  flagstone  precision:  0.9851116625310173
+class:  plastic  precision:  1.0
+class:  soil  precision:  1.0
+total accurracy is: 0.99074502545118
+
+model_path: model/fft_res/fft_res_entry_focalmore_42.pth
+class:  asphalt  precision:  0.9924433249370277
+class:  grass  precision:  0.986449864498645
+class:  cement  precision:  0.9661016949152542
+class:  board  precision:  1.0
+class:  brick  precision:  0.9947089947089947
+class:  gravel  precision:  0.9791666666666666
+class:  sand  precision:  1.0
+class:  flagstone  precision:  0.9949238578680203
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.9848484848484849
+total accurracy is: 0.990282276723739
+
+model_path: model/fft_res/fft_res_entry_focalmore_48.pth
+class:  asphalt  precision:  0.9924433249370277
+class:  grass  precision:  0.9891304347826086
+class:  cement  precision:  0.9620253164556962
+class:  board  precision:  1.0
+class:  brick  precision:  0.9947368421052631
+class:  gravel  precision:  0.9791666666666666
+class:  sand  precision:  1.0
+class:  flagstone  precision:  0.9949109414758269
+class:  plastic  precision:  1.0
+class:  soil  precision:  1.0
+total accurracy is: 0.99074502545118
+
+model_path: model/fft_res/fft_res_entry_focalmore_54.pth
+class:  asphalt  precision:  0.9924433249370277
+class:  grass  precision:  0.9891304347826086
+class:  cement  precision:  0.946058091286307
+class:  board  precision:  1.0
+class:  brick  precision:  0.9895287958115183
+class:  gravel  precision:  0.9791666666666666
+class:  sand  precision:  1.0
+class:  flagstone  precision:  0.9948453608247423
+class:  plastic  precision:  1.0
+class:  soil  precision:  1.0
+total accurracy is: 0.988431281813975
+
+model_path: model/fft_res/fft_res_entry_focalmore_60.pth
+class:  asphalt  precision:  0.9924433249370277
+class:  grass  precision:  0.986449864498645
+class:  cement  precision:  0.9620253164556962
+class:  board  precision:  1.0
+class:  brick  precision:  0.9947368421052631
+class:  gravel  precision:  0.9791666666666666
+class:  sand  precision:  1.0
+class:  flagstone  precision:  0.9923857868020305
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.9846153846153847
+total accurracy is: 0.989356779268857
+
+
+
+
+
+model_path: model/fft_res/fft_res_easy_focalmore_6.pth
+class:  asphalt  precision:  0.7435897435897436
+class:  grass  precision:  0.8959276018099548
+class:  cement  precision:  0.8571428571428571
+class:  board  precision:  nan
+class:  brick  precision:  0.9173553719008265
+class:  gravel  precision:  1.0
+class:  sand  precision:  0.228486646884273
+class:  flagstone  precision:  0.437219730941704
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.72
+total accurracy is: 0.6163101604278075
+
+model_path: model/fft_res/fft_res_easy_focalmore_12.pth
+class:  asphalt  precision:  0.8378378378378378
+class:  grass  precision:  1.0
+class:  cement  precision:  0.7843137254901961
+class:  board  precision:  1.0
+class:  brick  precision:  0.9576271186440678
+class:  gravel  precision:  0.9342105263157895
+class:  sand  precision:  0.8205128205128205
+class:  flagstone  precision:  0.6579804560260586
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.9367088607594937
+total accurracy is: 0.8643048128342246
+
+model_path: model/fft_res/fft_res_easy_focalmore_18.pth
+class:  asphalt  precision:  0.8177966101694916
+class:  grass  precision:  1.0
+class:  cement  precision:  0.8698630136986302
+class:  board  precision:  nan
+class:  brick  precision:  0.9545454545454546
+class:  gravel  precision:  1.0
+class:  sand  precision:  0.958904109589041
+class:  flagstone  precision:  0.6355140186915887
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.9642857142857143
+total accurracy is: 0.8729946524064172
+
+model_path: model/fft_res/fft_res_easy_focalmore_24.pth
+class:  asphalt  precision:  0.8482142857142857
+class:  grass  precision:  1.0
+class:  cement  precision:  0.9411764705882353
+class:  board  precision:  1.0
+class:  brick  precision:  0.9491525423728814
+class:  gravel  precision:  0.9861111111111112
+class:  sand  precision:  0.9493670886075949
+class:  flagstone  precision:  0.5804597701149425
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.9770114942528736
+total accurracy is: 0.8669786096256684
+
+model_path: model/fft_res/fft_res_easy_focalmore_30.pth
+class:  asphalt  precision:  0.8622222222222222
+class:  grass  precision:  0.9950248756218906
+class:  cement  precision:  0.8686131386861314
+class:  board  precision:  1.0
+class:  brick  precision:  0.8796992481203008
+class:  gravel  precision:  1.0
+class:  sand  precision:  0.9473684210526315
+class:  flagstone  precision:  0.6546052631578947
+class:  plastic  precision:  1.0
+class:  soil  precision:  1.0
+total accurracy is: 0.8830213903743316
+
+model_path: model/fft_res/fft_res_easy_focalmore_36.pth
+class:  asphalt  precision:  0.8727272727272727
+class:  grass  precision:  0.9900990099009901
+class:  cement  precision:  0.9375
+class:  board  precision:  1.0
+class:  brick  precision:  0.940677966101695
+class:  gravel  precision:  0.9859154929577465
+class:  sand  precision:  0.9259259259259259
+class:  flagstone  precision:  0.5930232558139535
+class:  plastic  precision:  1.0
+class:  soil  precision:  1.0
+total accurracy is: 0.8723262032085561
+
+model_path: model/fft_res/fft_res_easy_focalmore_42.pth
+class:  asphalt  precision:  0.8894009216589862
+class:  grass  precision:  1.0
+class:  cement  precision:  0.8581081081081081
+class:  board  precision:  1.0
+class:  brick  precision:  0.9242424242424242
+class:  gravel  precision:  0.9861111111111112
+class:  sand  precision:  0.961038961038961
+class:  flagstone  precision:  0.6317460317460317
+class:  plastic  precision:  1.0
+class:  soil  precision:  1.0
+total accurracy is: 0.8830213903743316
+
+model_path: model/fft_res/fft_res_easy_focalmore_48.pth
+class:  asphalt  precision:  0.8767123287671232
+class:  grass  precision:  1.0
+class:  cement  precision:  0.916083916083916
+class:  board  precision:  1.0
+class:  brick  precision:  0.9741379310344828
+class:  gravel  precision:  0.9861111111111112
+class:  sand  precision:  0.925
+class:  flagstone  precision:  0.625
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.9767441860465116
+total accurracy is: 0.8856951871657754
+
+model_path: model/fft_res/fft_res_easy_focalmore_54.pth
+class:  asphalt  precision:  0.875
+class:  grass  precision:  1.0
+class:  cement  precision:  0.8275862068965517
+class:  board  precision:  1.0
+class:  brick  precision:  0.9037037037037037
+class:  gravel  precision:  1.0
+class:  sand  precision:  0.972972972972973
+class:  flagstone  precision:  0.6099071207430341
+class:  plastic  precision:  1.0
+class:  soil  precision:  1.0
+total accurracy is: 0.8703208556149733
+
+model_path: model/fft_res/fft_res_easy_focalmore_60.pth
+class:  asphalt  precision:  0.8666666666666667
+class:  grass  precision:  1.0
+class:  cement  precision:  0.9069767441860465
+class:  board  precision:  1.0
+class:  brick  precision:  0.8985507246376812
+class:  gravel  precision:  0.9726027397260274
+class:  sand  precision:  0.974025974025974
+class:  flagstone  precision:  0.6285714285714286
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.9879518072289156
+total accurracy is: 0.8810160427807486
+
+
+
+
+
+
+
+model_path: model/fft_res/fft_res_medium_focalmore_6.pth
+class:  asphalt  precision:  0.9534883720930233
+class:  grass  precision:  1.0
+class:  cement  precision:  0.459866220735786
+class:  board  precision:  0.9230769230769231
+class:  brick  precision:  0.9044117647058824
+class:  gravel  precision:  0.958904109589041
+class:  sand  precision:  0.9833333333333333
+class:  flagstone  precision:  0.36024844720496896
+class:  plastic  precision:  0.4934579439252336
+class:  soil  precision:  0.6910569105691057
+total accurracy is: 0.6380543633762518
+
+model_path: model/fft_res/fft_res_medium_focalmore_12.pth
+class:  asphalt  precision:  0.6865671641791045
+class:  grass  precision:  0.9745762711864406
+class:  cement  precision:  0.5736961451247166
+class:  board  precision:  nan
+class:  brick  precision:  0.9692307692307692
+class:  gravel  precision:  0.9861111111111112
+class:  sand  precision:  0.958904109589041
+class:  flagstone  precision:  0.45454545454545453
+class:  plastic  precision:  0.7839506172839507
+class:  soil  precision:  0.9772727272727273
+total accurracy is: 0.7305674773485932
+
+model_path: model/fft_res/fft_res_medium_focalmore_18.pth
+class:  asphalt  precision:  0.6956521739130435
+class:  grass  precision:  0.9712230215827338
+class:  cement  precision:  0.5058365758754864
+class:  board  precision:  1.0
+class:  brick  precision:  0.9779411764705882
+class:  gravel  precision:  0.8352941176470589
+class:  sand  precision:  1.0
+class:  flagstone  precision:  0.5163398692810458
+class:  plastic  precision:  0.9923076923076923
+class:  soil  precision:  0.9883720930232558
+total accurracy is: 0.7567954220314735
+
+model_path: model/fft_res/fft_res_medium_focalmore_24.pth
+class:  asphalt  precision:  0.7005347593582888
+class:  grass  precision:  0.8790560471976401
+class:  cement  precision:  0.7364130434782609
+class:  board  precision:  1.0
+class:  brick  precision:  0.9779411764705882
+class:  gravel  precision:  0.9594594594594594
+class:  sand  precision:  0.8875
+class:  flagstone  precision:  0.5833333333333334
+class:  plastic  precision:  0.9962121212121212
+class:  soil  precision:  0.9651162790697675
+total accurracy is: 0.7978063900810682
+
+model_path: model/fft_res/fft_res_medium_focalmore_30.pth
+class:  asphalt  precision:  0.8185053380782918
+class:  grass  precision:  0.8765133171912833
+class:  cement  precision:  0.534516765285996
+class:  board  precision:  1.0
+class:  brick  precision:  0.9767441860465116
+class:  gravel  precision:  1.0
+class:  sand  precision:  0.922077922077922
+class:  flagstone  precision:  0.5254901960784314
+class:  plastic  precision:  0.9633699633699634
+class:  soil  precision:  0.9885057471264368
+total accurracy is: 0.7715784453981879
+
+model_path: model/fft_res/fft_res_medium_focalmore_36.pth
+class:  asphalt  precision:  0.6871508379888268
+class:  grass  precision:  0.8994082840236687
+class:  cement  precision:  0.6339066339066339
+class:  board  precision:  1.0
+class:  brick  precision:  0.9772727272727273
+class:  gravel  precision:  1.0
+class:  sand  precision:  0.9473684210526315
+class:  flagstone  precision:  0.49295774647887325
+class:  plastic  precision:  0.9704797047970479
+class:  soil  precision:  1.0
+total accurracy is: 0.7663328564616119
+
+model_path: model/fft_res/fft_res_medium_focalmore_42.pth
+class:  asphalt  precision:  0.6461538461538462
+class:  grass  precision:  0.92
+class:  cement  precision:  0.6
+class:  board  precision:  1.0
+class:  brick  precision:  0.9710144927536232
+class:  gravel  precision:  1.0
+class:  sand  precision:  0.9473684210526315
+class:  flagstone  precision:  0.45066666666666666
+class:  plastic  precision:  0.9528985507246377
+class:  soil  precision:  0.9886363636363636
+total accurracy is: 0.7401049117787315
+
+model_path: model/fft_res/fft_res_medium_focalmore_48.pth
+class:  asphalt  precision:  0.9117647058823529
+class:  grass  precision:  0.8894348894348895
+class:  cement  precision:  0.6634615384615384
+class:  board  precision:  1.0
+class:  brick  precision:  0.9696969696969697
+class:  gravel  precision:  0.9861111111111112
+class:  sand  precision:  0.9342105263157895
+class:  flagstone  precision:  0.476303317535545
+class:  plastic  precision:  0.9357142857142857
+class:  soil  precision:  1.0
+total accurracy is: 0.7844539818788746
+
+model_path: model/fft_res/fft_res_medium_focalmore_54.pth
+class:  asphalt  precision:  0.7050847457627119
+class:  grass  precision:  0.8962536023054755
+class:  cement  precision:  0.6215596330275229
+class:  board  precision:  1.0
+class:  brick  precision:  0.9701492537313433
+class:  gravel  precision:  0.9726027397260274
+class:  sand  precision:  0.9
+class:  flagstone  precision:  0.46648793565683644
+class:  plastic  precision:  0.966789667896679
+class:  soil  precision:  1.0
+total accurracy is: 0.7567954220314735
+
+model_path: model/fft_res/fft_res_medium_focalmore_60.pth
+class:  asphalt  precision:  0.7472527472527473
+class:  grass  precision:  0.9018567639257294
+class:  cement  precision:  0.6335697399527187
+class:  board  precision:  1.0
+class:  brick  precision:  0.9694656488549618
+class:  gravel  precision:  1.0
+class:  sand  precision:  0.922077922077922
+class:  flagstone  precision:  0.4986301369863014
+class:  plastic  precision:  0.9103448275862069
+class:  soil  precision:  1.0
+total accurracy is: 0.771101573676681
+
+class:  asphalt  precision:  0.5868055555555556
+class:  grass  precision:  0.481421647819063
+class:  cement  precision:  0.4375
+class:  board  precision:  1.0
+class:  brick  precision:  0.8217391304347826
+class:  gravel  precision:  0.07142857142857142
+class:  sand  precision:  0.3945945945945946
+class:  flagstone  precision:  0.7294520547945206
+class:  plastic  precision:  0.9701492537313433
+class:  soil  precision:  0.2608695652173913
+total accurracy is: 0.5609430604982206
+class:  asphalt  precision:  0.7005347593582888
+class:  grass  precision:  0.8790560471976401
+class:  cement  precision:  0.7364130434782609
+class:  board  precision:  1.0
+class:  brick  precision:  0.9779411764705882
+class:  gravel  precision:  0.9594594594594594
+class:  sand  precision:  0.8875
+class:  flagstone  precision:  0.5833333333333334
+class:  plastic  precision:  0.9962121212121212
+class:  soil  precision:  0.9651162790697675
+total accurracy is: 0.7978063900810682
+class:  asphalt  precision:  0.8767123287671232
+class:  grass  precision:  1.0
+class:  cement  precision:  0.916083916083916
+class:  board  precision:  1.0
+class:  brick  precision:  0.9741379310344828
+class:  gravel  precision:  0.9861111111111112
+class:  sand  precision:  0.925
+class:  flagstone  precision:  0.625
+class:  plastic  precision:  1.0
+class:  soil  precision:  0.9767441860465116
+total accurracy is: 0.8856951871657754
+class:  asphalt  precision:  0.9924433249370277
+class:  grass  precision:  0.9891304347826086
+class:  cement  precision:  0.9620253164556962
+class:  board  precision:  1.0
+class:  brick  precision:  0.9947368421052631
+class:  gravel  precision:  0.9791666666666666
+class:  sand  precision:  1.0
+class:  flagstone  precision:  0.9949109414758269
+class:  plastic  precision:  1.0
+class:  soil  precision:  1.0
+total accurracy is: 0.99074502545118

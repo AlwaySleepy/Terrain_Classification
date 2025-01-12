@@ -195,3 +195,83 @@ def edl_digamma_loss(
         )
     )
     return loss
+
+
+
+import torch.nn as nn
+from torch.autograd import Variable
+
+class FocalLoss(nn.Module):
+    def __init__(self, gamma=2, alpha=None, size_average=True):
+        super(FocalLoss, self).__init__()
+        self.gamma = gamma
+        self.alpha = alpha
+        if isinstance(alpha,(float,int)): self.alpha = torch.Tensor([alpha,1-alpha])
+        if isinstance(alpha,list): self.alpha = torch.Tensor(alpha)
+        self.size_average = size_average
+
+    def forward(self, input, target):
+        if input.dim()>2:
+            input = input.view(input.size(0),input.size(1),-1)  # N,C,H,W => N,C,H*W
+            input = input.transpose(1,2)    # N,C,H*W => N,H*W,C
+            input = input.contiguous().view(-1,input.size(2))   # N,H*W,C => N*H*W,C
+        target = target.view(-1,1)
+
+        logpt = F.log_softmax(input)
+        logpt = logpt.gather(1,target)
+        logpt = logpt.view(-1)
+        pt = Variable(logpt.data.exp())
+
+        if self.alpha is not None:
+            if self.alpha.type()!=input.data.type():
+                self.alpha = self.alpha.type_as(input.data)
+            at = self.alpha.gather(0,target.data.view(-1))
+            logpt = logpt * Variable(at)
+
+        loss = -1 * (1-pt)**self.gamma * logpt
+        # print("compute focal loss")
+        if self.size_average: return loss.mean()
+        else: return loss.sum()
+
+
+class SupervisedContrastiveLoss(torch.nn.Module):
+    def __init__(self, temperature=0.07):
+        super(SupervisedContrastiveLoss, self).__init__()
+        self.temperature = temperature
+
+    def forward(self, features, labels):
+        """
+        Args:
+            features: Tensor of shape (batch_size, feature_dim)
+            labels: Tensor of shape (batch_size) with class labels
+        Returns:
+            loss: Supervised Contrastive Loss
+        """
+        batch_size = features.shape[0]
+
+        # Normalize features to unit sphere
+        features = F.normalize(features, p=2, dim=1)
+
+        # Compute similarity matrix (cosine similarity)
+        # print(features.shape)
+        similarity_matrix = torch.matmul(features, features.T) / self.temperature
+
+        # Mask to remove self-comparisons
+        mask = torch.eye(batch_size, dtype=torch.bool).to(features.device)
+
+        # Get labels similarity mask
+        labels = labels.contiguous().view(-1, 1)
+        label_mask = torch.eq(labels, labels.T).float().to(features.device)
+
+        # Remove self-similarity for positive samples
+        positives_mask = label_mask * (~mask).float()
+
+        # Compute loss for all samples
+        exp_similarity = torch.exp(similarity_matrix)
+        log_prob = similarity_matrix - torch.log(exp_similarity.sum(dim=1, keepdim=True))
+        per_sample_loss = -(positives_mask * log_prob).sum(dim=1) / (positives_mask.sum(dim=1) + 1e-8)
+        
+        # Average loss over batch
+        loss = per_sample_loss.mean()
+
+        return loss
